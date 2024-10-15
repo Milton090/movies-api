@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Películas</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Listado de Películas</h1>
+        <form id="search-form" aria-label="Buscar película">
+            <input type="text" id="search-title" placeholder="Título de la película" required aria-required="true">
+            <button type="submit">Buscar</button>
+        </form>
+    </header>
+
+    <main>
+        <section aria-labelledby="api-movies-heading">
+            <h2 id="api-movies-heading">Películas desde la API</h2>
+            <div class="grid-container" id="api-movies-grid"></div>
+            <button id="add-to-db-btn" style="display:none;">Agregar a Base de Datos</button>
+        </section>
+
+        <section aria-labelledby="db-movies-heading">
+            <h2 id="db-movies-heading">Películas Almacenadas en la Base de Datos</h2>
+            <input type="text" id="db-search-title" placeholder="Filtrar películas de la base de datos"
+            aria-label="Filtrar películas de la base de datos">
+            <button id="download-excel-btn">Descargar Excel</button>
+            <div class="grid-container" id="db-movies-grid"></div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
